@@ -4,14 +4,18 @@ class Program
 {
     static void Main(string[] args)
     {
+        int magicalNumber;
+        int guess;
+
         Console.Write("What is the magical number? ");
         string answer1 = Console.ReadLine();
-        int magicalNumber;
         magicalNumber = int.Parse(answer1);
 
-        Console.Write("What is your guess? ");
-        string answer2 = Console.ReadLine();
-        int guess = int.Parse(answer2);
+        do
+        {
+            Console.Write("What is your guess? ");
+            string answer2 = Console.ReadLine();
+            guess = int.Parse(answer2);
 
         if (magicalNumber < guess)
         {
@@ -27,5 +31,9 @@ class Program
         {
             Console.WriteLine("You guessed it!");
         }
+
+        } while (magicalNumber != guess);
+
+
     }
 }
