@@ -8,7 +8,8 @@ class Program
 
         int number;
         int sum;
-       float average;
+        float average;
+        int largest;
        
         List<int> numbers = new List<int>();
 
@@ -33,5 +34,15 @@ class Program
 
         average = ((float)sum)/numbers.Count;
         Console.WriteLine($"The average is: {average}");
+
+        largest = 0;
+        foreach (int num in numbers)
+        {
+            if (num > largest)
+            {
+            largest = num;                
+            }
+        }
+        Console.WriteLine($"The largest number is: {largest}");
     }
 }
