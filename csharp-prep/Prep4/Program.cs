@@ -8,8 +8,8 @@ class Program
 
         int number;
         int sum;
-       float average;
-       
+        float average;
+        
         List<int> numbers = new List<int>();
 
         do
