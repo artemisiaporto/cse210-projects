@@ -8,6 +8,8 @@ class Program
 
         int number;
         int sum;
+       float average;
+       
         List<int> numbers = new List<int>();
 
         do
@@ -15,7 +17,11 @@ class Program
             Console.Write("Enter number: ");
             string answer = Console.ReadLine();
             number = int.Parse(answer);
-            numbers.Add(number);
+
+            if (number != 0)
+            {
+                numbers.Add(number);
+            }
         } while (number != 0);
 
         sum = 0;
@@ -24,5 +30,8 @@ class Program
             sum += num;
         }
         Console.WriteLine($"The sum is: {sum}");
+
+        average = ((float)sum)/numbers.Count;
+        Console.WriteLine($"The average is: {average}");
     }
 }
