@@ -4,12 +4,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        int magicalNumber;
+        Random randomGenerator = new Random();
+        int magicalNumber = randomGenerator.Next(1, 100);
         int guess;
-
-        Console.Write("What is the magical number? ");
-        string answer1 = Console.ReadLine();
-        magicalNumber = int.Parse(answer1);
 
         do
         {
